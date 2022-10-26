@@ -1,8 +1,11 @@
 package week1;
 import java.util.Scanner;
 public class DayofMonths {
+	    @SuppressWarnings("resource")
 		public static void main(String[] strings) {
 	        Scanner input = new Scanner(System.in);
+
+
 
 	       int number_Of_DaysInMonth = 0;
 	        String MonthOfName = "Unknown";
@@ -17,7 +20,7 @@ public class DayofMonths {
 	       System.out.print("Input a year: ");
 	        int year = input.nextInt();
 
-           input.close();
+
 
 	       switch (month) {
 	            case 1:

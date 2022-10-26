@@ -22,7 +22,6 @@ public class PrintStar {
 		            // for new line after printing each row
 		            System.out.println();
 		        }
-		        s.close();
 		    }
 		
 	}
