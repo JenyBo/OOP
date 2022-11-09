@@ -18,8 +18,8 @@ public class Cart {
 			{
 				itemsOrdered[i] = itemsOrdered[i+1];
 			}
-			qtyOrdered--;
 		}
+		qtyOrdered--;
 	}
 	public float totalCost() {
 		float SUM = 0 ;
