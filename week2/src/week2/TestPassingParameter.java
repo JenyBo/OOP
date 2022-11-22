@@ -10,10 +10,13 @@ public class TestPassingParameter {
 	        
 	        swap(jungleDVD, cinderellaDVD);
 	        
-	        System.out.println("After Swap");
+	        System.out.println("\nAfter Swap");
 	        System.out.println("Jungle DVD title: " + jungleDVD.getTitle());
 	        System.out.println("Cinderella dvd title: " + cinderellaDVD.getTitle());
 	        
+	        changeTitle(jungleDVD, cinderellaDVD.getTitle());
+	        System.out.print("\nSwap title ");
+	        System.out.println("Jungle DVD title: " + jungleDVD.getTitle());
 	        
 	    }
 	    public static void swap(Object o1, Object o2){
