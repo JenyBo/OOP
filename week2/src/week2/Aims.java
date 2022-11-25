@@ -19,8 +19,11 @@ public class Aims {
 		System.out.println(anOrder.totalCost());
 		
 		System.out.println("total cost after remove dvd3 is: ");
-		anOrder.removeDigitalVideoDisc(dvd3);
+		anOrder.removeDigitalVideoDisc(dvd2);
 		System.out.println(anOrder.totalCost());
 		
+		anOrder.print();
+	    anOrder.searchByID(3);
+	    anOrder.searchByTitle("The Lion King");
 	}
 }
