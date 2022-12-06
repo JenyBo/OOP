@@ -3,80 +3,25 @@ package hust.soict.hedspi.aims.media;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
+public class Book extends Media {
 
-	private static int count = 0;
-	private int id;
-	private String title;
-	private String category;
-	private float cost;
+//	private static int count = 0;
 	private List<String> authors = new ArrayList<String>();
 	
-	public Book() {
-		count++;
-		this.id = count;
+//	public void Book() {
+//		count++;
+//		this.setId(count);
+//	}
+	
+	public Book(int id , String title, String category, float cost) {
+		super(id,title,category,cost);
 	}
 	
-	public Book(String title, String category, float cost) {
-		this();
-		this.title = title;
-		this.category = category;
-		this.cost = cost;
-	}
-	
-	public Book(String title, String category, float cost , List<String> authors) {
-		this(title,category,cost);
+	public Book(int id , String title, String category, float cost , List<String> authors) {
+		super(id,title,category,cost);
 		this.authors = authors;
 	}
 	
-	
-	public int getId() {
-		return id;
-	}
-
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-
-	public String getTitle() {
-		return title;
-	}
-
-
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-
-
-	public String getCategory() {
-		return category;
-	}
-
-
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
-
-
-	public float getCost() {
-		return cost;
-	}
-
-
-
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
-
-
 
 	public List<String> getAuthors() {
 		return authors;
@@ -88,8 +33,12 @@ public class Book {
 		this.authors = authors;
 	}
 	
+	public String toString() {
+		return this.id + " - " + this.title + " - " + this.category 
+	    + " - " + this.cost + " - " + this.authors ;
+	}
 	public void addAuthor(String authorName) {
-		if(authors.contains(authorName)) {
+		if(!authors.contains(authorName)) {
 			authors.add(authorName);
 		}
 		else {
@@ -106,9 +55,18 @@ public class Book {
 		}
 	}
 
-	public static void main(String[] args) {
-		Book book1 = new Book("Doraemon","Comedy",10.5f);
-		Book book2 = new Book("Conan","Detective",12.5f,{Asan);
+	public void print(int id) {
+		System.out.println(id);
 	}
-
+	public static void main(String[] args) {
+		List<String> authors1 = new ArrayList<String>();
+		authors1.add("Asan");
+		Book book1 = new Book(1,"Doraemon","Comedy",10.5f,authors1);
+		Book book2 = new Book(2,"Conan","Detective",12.5f,(List<String>) new ArrayList<String>(List.of("B","C")));
+		book2.addAuthor("D");
+		book2.removeAuthor("C");
+		System.out.println(book1.getId());
+		System.out.println(book2.toString());
+	}
+	
 }
