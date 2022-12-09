@@ -1,64 +1,46 @@
 package hust.soict.hedspi.aims.media;
 
-import hust.soict.hedspi.aims.media.Media;
-
 public abstract class Media {
-	protected static int count = 0;
-	protected int id;
-	protected String title;
-	protected String category;
-	protected float cost;
+    protected int id;
+    protected String title;
+    protected String category;
+    protected float cost;
+    public Media() {
 
-//	public Media() {
-//		count++;
-//		this.setId(count);
-//	}
+    }
+    public Media(String title) {
+        this();
+        this.title = title;
+    }
 
-	public static int getCount() {
-		return count;
-	}
+    public Media(String title, String category, float cost) {
+        this(title);
+        this.category = category;
+        this.cost = cost;
+    }
 
-	public static void setCount(int count) {
-		Media.count = count;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public String getCategory() {
+        return category;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public float getCost() {
+        return cost;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public abstract String toString();
 
-	public String getCategory() {
-		return category;
-	}
+    @Override
+    public boolean equals(Object o){
+        Media tmp = (Media)o;
+        return this.title.equals(tmp.getTitle());
+    }
 
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
-	public float getCost() {
-		return cost;
-	}
-
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
-	
-	public Media(int id , String title, String category, float cost) {
-		this.id = id;
-		this.title = title;
-		this.category = category;
-		this.cost = cost;
-	}
-	
 }

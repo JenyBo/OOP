@@ -1,63 +1,62 @@
 package hust.soict.hedspi.aims.disc;
 
-import hust.soict.hedspi.aims.media.Media;
+public class DigitalVideoDisc {
+    private static int nbDigitalVideoDisc = 0;
+    private int id;
+    private String title;
 
-public class DigitalVideoDisc extends Media {
-//    private static int nbDigitalVideoDisc = 0;
-//    private int id;
-//    private String title;
-//
-//    private String category;
+    private String category;
 
     private String director;
 
     private int length;
 
-//    private float cost;
+    private float cost;
 
-//    public DigitalVideoDisc() {
-//    	nbDigitalVideoDisc++;
-//    	this.id = nbDigitalVideoDisc;
-//    }
-    
-//    public DigitalVideoDisc(String title){
-//    	this();
-//        this.title = title;
-//    }
-//
-    public DigitalVideoDisc(int id , String title, String category, float cost) {
-        super(id , title , category , cost);
+    public DigitalVideoDisc() {
+        nbDigitalVideoDisc++;
+        this.id = nbDigitalVideoDisc;
     }
 
-    public DigitalVideoDisc(int id , String title, String category, String director, float cost) {
-        super(id , title, category, cost);
+    public DigitalVideoDisc(String title){
+        this();
+        this.title = title;
+    }
+
+    public DigitalVideoDisc(String title, String category, float cost) {
+        this(title);
+        this.category = category;
+        this.cost = cost;
+    }
+
+    public DigitalVideoDisc(String title, String category, String director, float cost) {
+        this(title, category, cost);
         this.director = director;
     }
 
-    public DigitalVideoDisc(int id , String title, String category, String director, int length, float cost) {
-        this(id , title, category, director, cost);
+    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+        this(title, category, director, cost);
         this.length = length;
     }
 
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    public float getCost() {
-//        return cost;
-//    }
-//
-//    public String getCategory() {
-//        return category;
-//    }
+    public int getId() {
+        return id;
+    }
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public float getCost() {
+        return cost;
+    }
+
+    public String getCategory() {
+        return category;
+    }
 
     public String getDirector() {
         return director;
@@ -83,4 +82,5 @@ public class DigitalVideoDisc extends Media {
                 && this.director.equals(disc.director) && this.length == disc.length
                 && this.cost == disc.cost;
     }
+
 }
