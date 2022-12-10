@@ -1,9 +1,9 @@
 package hust.soict.hedspi.aims;
-
+//import hust.soict.dsai.aims.cart.Cart;
 import java.util.Scanner;
 //import hust.soict.dsai.aims.disc.DigitalVideoDisc;
-import hust.soict.hedspi.aims.media.*;
-import hust.soict.hedpsi.aims.cart.Cart;
+//import hust.soict.dsai.aims.media.*;
+
 
 public class Aims {
     public static void showMenu() {
