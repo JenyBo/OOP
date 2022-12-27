@@ -4,9 +4,16 @@ import java.util.Comparator;
 
 public class MediaComparatorByCostTitle implements Comparator<Media> {
 
-    @Override
-    public int compare(Media o1, Media o2) {
-        int check = Math.round(o1.getCost() - o2.getCost());
-        return check != 0 ? check : o1.getTitle().compareTo(o2.getTitle());
-    }
+	public MediaComparatorByCostTitle() {
+
+	}
+
+	@Override
+	public int compare(Media o1, Media o2) {
+		if ((int)(o1.getCost() - o2.getCost()) != 0) {
+			return (int)(o1.getCost() - o2.getCost());
+		}
+		return o1.getTitle().compareTo(o2.getTitle());
+	}
+
 }

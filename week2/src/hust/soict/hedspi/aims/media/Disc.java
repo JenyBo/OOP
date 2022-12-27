@@ -1,40 +1,29 @@
+
 package hust.soict.hedspi.aims.media;
 
-public class Disc extends Media{
-    protected int length;
-    protected String director;
+public class Disc extends Media {
+	
+	private String director;
+	private int length;
+		
 
-    public Disc() {
-        super();
-    }
+	public String getDirector() {
+		return director;
+	}
 
-    public Disc(String title) {
-        super(title);
-    }
 
-    public Disc(String title, String category, float cost) {
-        super(title, category, cost);
-    }
+	public int getLength() {
+		return length;
+	}
 
-    public Disc(String title, String category, String director, float cost) {
-        this(title, category, cost);
-        this.director = director;
-    }
 
-    public Disc(String title, String category, String director, int length, float cost) {
-        this(title, category, director, cost);
-        this.length = length;
-    }
+	public Disc(String director, int length) {
+		this.director = director;
+		this.length = length;
+	}
+	
+	public Disc() {
+		
+	}
 
-    public int getLength() {
-        return length;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public String toString() {
-        return null;
-    }
 }

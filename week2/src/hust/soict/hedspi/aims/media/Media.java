@@ -1,46 +1,66 @@
+
 package hust.soict.hedspi.aims.media;
 
+import java.util.Comparator;
+
 public abstract class Media {
-    protected int id;
-    protected String title;
-    protected String category;
-    protected float cost;
-    public Media() {
+	
+	private int id;
+	private String title;
+	private String category;
+	private float cost;
 
-    }
-    public Media(String title) {
-        this();
-        this.title = title;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public Media(String title, String category, float cost) {
-        this(title);
-        this.category = category;
-        this.cost = cost;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public String getCategory() {
-        return category;
-    }
+	public String getCategory() {
+		return category;
+	}
 
-    public float getCost() {
-        return cost;
-    }
+	public void setCategory(String category) {
+		this.category = category;
+	}
 
-    public abstract String toString();
+	public float getCost() {
+		return cost;
+	}
 
-    @Override
-    public boolean equals(Object o){
-        Media tmp = (Media)o;
-        return this.title.equals(tmp.getTitle());
-    }
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
+
+	public Media() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (obj instanceof Media) {
+			Media media = (Media) obj;
+			return this.getTitle().equals(media.getTitle());
+		}
+		return false;
+	}
+	
+	public static final Comparator<Media> COMPARE_BY_TITLE_COST =
+			new MediaComparatorByTitleCost();
+	public static final Comparator<Media> COMPARE_BY_COST_TITLE =
+			new MediaComparatorByCostTitle();
 
 }
