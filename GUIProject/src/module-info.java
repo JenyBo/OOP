@@ -5,6 +5,6 @@
  * @author ADMIN
  *
  */
-module week2 {
+module GUIProject {
 	requires java.desktop;
 }
