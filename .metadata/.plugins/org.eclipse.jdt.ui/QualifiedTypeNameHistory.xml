@@ -16,4 +16,5 @@
     <fullyQualifiedTypeName name="java.awt.GridLayout"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="hust.soict.hedspi.aims.media.Media"/>
+    <fullyQualifiedTypeName name="java.awt.TextField"/>
 </qualifiedTypeNameHistroy>
