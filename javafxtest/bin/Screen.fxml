@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxWidth="1.7976931348623157E308" prefHeight="445.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <ScrollPane prefHeight="344.0" prefWidth="639.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+         <content>
+            <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="414.0" prefWidth="637.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
+                <ColumnConstraints halignment="LEFT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="0.0" />
+                  <ColumnConstraints halignment="LEFT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="0.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="1.7976931348623157E308" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TitledPane prefHeight="200.0" prefWidth="200.0" text="Nhân vật 1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <content>
+                        <Label text="Content" />
+                     </content>
+                  </TitledPane>
+                  <TitledPane prefHeight="200.0" prefWidth="200.0" text="Test2" GridPane.rowIndex="1" />
+                  <TitledPane prefHeight="200.0" prefWidth="200.0" text="Test3" GridPane.rowIndex="2" />
+                  <TitledPane prefHeight="200.0" prefWidth="200.0" text="Test4" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <GridPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="8.000005722045898" prefWidth="68.00000762939453" />
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="386.3999755859375" />
+            <ColumnConstraints maxWidth="1.7976931348623157E308" minWidth="78.4000366210937" prefWidth="144.00002441406252" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BottomNavigationButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Search" />
+            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <MenuButton alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Select" GridPane.columnIndex="2">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Nhân vật lịch sử" />
+                <MenuItem mnemonicParsing="false" text="Triều đại lịch sử" />
+                  <MenuItem mnemonicParsing="false" text="Sự kiện lịch sử" />
+                  <MenuItem mnemonicParsing="false" text="Lễ hội văn hóa" />
+                  <MenuItem mnemonicParsing="false" text="Địa điểm , di tích lịch sử" />
+              </items>
+            </MenuButton>
+         </children>
+      </GridPane>
+   </top>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <bottom>
+      <Text fill="#d73131" strokeType="OUTSIDE" strokeWidth="0.0" text="Lịch sử Việt Nam" textAlignment="CENTER" wrappingWidth="418.7830843925476" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Text>
+   </bottom>
+</BorderPane>

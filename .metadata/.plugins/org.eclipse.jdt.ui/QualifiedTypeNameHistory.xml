@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.swing.JPanel"/>
     <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
@@ -17,4 +18,10 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="hust.soict.hedspi.aims.media.Media"/>
     <fullyQualifiedTypeName name="java.awt.TextField"/>
+=======
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.disc.DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+>>>>>>> main
 </qualifiedTypeNameHistroy>
